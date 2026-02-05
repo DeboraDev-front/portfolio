@@ -372,7 +372,7 @@ p{
   max-height: 420px; 
   object-fit: cover;
   object-position: top; 
-  border-radius: var(--radius-md);
+  border-radius:16px;
   display: block;
 }
 
