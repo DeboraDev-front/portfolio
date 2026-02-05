@@ -489,7 +489,9 @@ p{
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
 }
-
+.footer-info p{
+    color: var(--color-bg-primary);
+}
 .footer-links {
   margin-top: 0.75rem;
 }
