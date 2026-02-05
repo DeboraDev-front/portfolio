@@ -13,6 +13,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">DG</a>
+
+            <nav class="nav" id="nav">
+                <button class="nav-close" id="navClose" aria-label="Fechar menu">
+                    ✕
+                </button>
+
+                <ul class="nav-list">
+                    <li><a href="#sobre" class="nav-link">Sobre mim</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                ☰
+            </button>
+        </div>
+    </header>
+
     <section class="hero">
         <div class="container hero-wrapper">
 
@@ -36,14 +59,14 @@
             </div>
 
             <div class="hero-image">
-                <img src="src/images/image-hero.jpg" alt="foto profissional em preto e branco">
+                <img src="src/images/img-hero.png" alt="foto profissional em preto e branco">
             </div>
 
 
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="sobre">
         <div class="container about-wrapper">
 
             <header class="about-header">
@@ -174,7 +197,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="src/images/denise-nails.JPG" alt="página inicial do site da Denise Nails">
+                        <img src="src/images/denise.JPG" alt="página inicial do site da Denise Nails">
                     </div>
 
                     <div class="project-content">
@@ -199,7 +222,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="src/images/ib-canoas.JPG" alt="Site Igreja Batista de Canoas">
+                        <img src="src/images/ib.JPG" alt="Site Igreja Batista de Canoas">
                     </div>
 
                     <div class="project-content">
@@ -219,7 +242,7 @@
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="src/images/maria-doce.JPG" alt="Projeto fictício Confeitaria">
+                        <img src="src/images/maria.JPG" alt="Projeto fictício Confeitaria">
                     </div>
 
                     <div class="project-content">
@@ -283,5 +306,28 @@
 
         </div>
 </footer>
+
+
+<script>
+  const nav = document.getElementById("nav");
+  const navToggle = document.getElementById("navToggle");
+  const navClose = document.getElementById("navClose");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  function closeMenu() {
+    nav.classList.remove("active");
+  }
+
+  navToggle.addEventListener("click", () => {
+    nav.classList.add("active");
+  });
+
+  navClose.addEventListener("click", closeMenu);
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>
+
 </body>
 </html>
